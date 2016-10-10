@@ -1,0 +1,1 @@
+delete from ZMDS119 a where (a.FIELD25, a.FIELD26, a.MJCC, a.MJH) in       (select FIELD25, FIELD26, MJCC, MJH          from ZMDS119         group by FIELD25, FIELD26, MJCC, MJH        having count(*) > 1)   and rowid not in (select min(rowid)                       from ZMDS119                      group by FIELD25, FIELD26, MJCC, MJH                     having count(*) > 1)
