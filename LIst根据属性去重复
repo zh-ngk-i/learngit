@@ -1,0 +1,1 @@
+for (int i = 0; i < mList.size()-1; i++) {      for (int j = mList.size()-1; j > i; j--) {          if (mList.get(j).destip.equals(mList.get(i).destip)) {              mList.remove(j);          }      }  }  
